@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <script src="aframe.min.js"></script>
+    <script src="aframe-ar.js"></script>
+    <script src="aframe-event-set-component.min.js"></script>
+    <style>
+      #btn{
+          background-color: skyblue;
+          position: absolute;
+          top:0;
+          right: 0;
+          width: 50px;
+          height: 50px;
+      }
+      #text1{
+          background-color: aliceblue;
+          position: absolute;
+          top:150px;
+          right: 0;
+          width: 300px;
+          display: none;
+      }
+  </style>
+  </head>
+  <body>
+    <a-scene  id="cube">
+      <a-assets>
+        <a-asset-item id="mol" src="6134.glb"></a-asset-item>
+        <a-asset-item id="mol2" src="1118.glb"></a-asset-item>
+        <a-asset-item id="mol3" src="24529.glb"></a-asset-item>
+        <a-asset-item id="mol4" src="176.glb"></a-asset-item>
+        <a-asset-item id="mol5" src="1004.glb"></a-asset-item>
+        <a-asset-item id="mol6" src="781.glb"></a-asset-item>
+        <a-asset-item id="mol7" src="3084658.glb"></a-asset-item>
+        <a-asset-item id="mol8" src="24530.glb"></a-asset-item>
+        <img id="text1" src="nadpis3.png" />
+        <img id="text2" src="nadpis2.png" />
+        <img id="text3" src="nadpis4.png" />
+        <img id="text4" src="nadpis5.png" />
+        <img id="text5" src="nadpis6.png" />
+        <img id="text6" src="nadpis7.png" />
+        <img id="text7" src="nadpis8.png" />
+      </a-assets>
+      
+      <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
+      <a-marker preset="kanji">
+        <a-gltf-model src="#mol" position="0 0 0"
+        animation__click="property: rotation; to: 360 0 0; startEvents: click; dur: 5000; loop:true; easing:linear"
+        scale="0.5 0.5 0.5"></a-gltf-model>
+      </a-marker>
+      <a-marker preset="hiro">
+        <a-plane src="#text1" position="0 0 -2" rotation="-90 0 0"></a-plane>
+        <a-gltf-model src="#mol2" position="0 1 0" 
+        animation__click="property: rotation; to: 360 360 0; startEvents: click; dur: 1000; loop:true; easing:linear"
+        scale="0.5 0.5 0.5"></a-gltf-model>
+      </a-marker>
+      <a-marker type="pattern" url="pattern-Star.patt">
+        <a-plane src="#text2" position="0 0 -2" rotation="-90 0 0"></a-plane>
+        <a-gltf-model src="#mol3" position="0 0 0" visible="true" rotation="90 0 0"
+        animation__click="property: rotation; to: 0 0 360; startEvents: click; dur: 1000; loop:true; easing:linear"
+        scale="0.5 0.5 0.5"></a-gltf-model>
+      </a-marker>
+      <a-marker type="pattern" url="letterA.patt">
+        <a-plane src="#text3" position="0 0 -2" rotation="-90 0 0"></a-plane>
+        <a-gltf-model src="#mol5" position="0 0 0" visible="true" rotation="90 0 0"
+        animation__click="property: rotation; to: 0 0 360; startEvents: click; dur: 1000; loop:true; easing:linear"
+        scale="0.5 0.5 0.5"></a-gltf-model>
+      </a-marker>
+      <a-marker type="pattern" url="letterB.patt">
+        <a-plane src="#text4" position="0 0 -2" rotation="-90 0 0"></a-plane>
+        <a-gltf-model src="#mol4" position="0 0 0" visible="true" rotation="90 0 0"
+        animation__click="property: rotation; to: 0 0 360; startEvents: click; dur: 1000; loop:true; easing:linear"
+        scale="0.5 0.5 0.5"></a-gltf-model>
+      </a-marker>
+      <a-marker type="pattern" url="letterC.patt">
+        <a-plane src="#text5" position="0 0 -2" rotation="-90 0 0" scale="2 1 1"></a-plane>
+        <a-gltf-model src="#mol6" position="0 0 0" visible="true" rotation="90 0 0"
+        animation__click="property: rotation; to: 0 0 360; startEvents: click; dur: 1000; loop:true; easing:linear"
+        scale="0.5 0.5 0.5"></a-gltf-model>
+      </a-marker>
+      <a-marker type="pattern" url="letterD.patt">
+        <a-plane src="#text6" position="0 0 -2" rotation="-90 0 0" scale="2 1 1"></a-plane>
+        <a-gltf-model src="#mol7" position="0 0 0" visible="true" rotation="90 0 0"
+        animation__click="property: rotation; to: 0 0 360; startEvents: click; dur: 1000; loop:true; easing:linear"
+        scale="0.5 0.5 0.5"></a-gltf-model>
+      </a-marker>
+      <a-marker type="pattern" url="letterF.patt">
+        <a-plane src="#text7" position="0 0 -2" rotation="-90 0 0" scale="2 1 1"></a-plane>
+        <a-gltf-model src="#mol8" position="0 0 0" visible="true" rotation="90 0 0"
+        animation__click="property: rotation; to: 0 0 360; startEvents: click; dur: 1000; loop:true; easing:linear"
+        scale="0.5 0.5 0.5"></a-gltf-model>
+      </a-marker>
+      
+    </a-scene>
+  <!--  <script>
+      let btn=document.getElementById('btn')
+      let text1=document.getElementById('text1')
+      btn.addEventListener('click',()=>{
+          text1.style.display='block'
+      })
+  </script> -->
+  </body>
+</html>
